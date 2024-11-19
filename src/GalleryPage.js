@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./App.css";
+import ImageList from '@mui/material/ImageList';
+import ImageListItem from '@mui/material/ImageListItem';
 
 function GalleryPage() {
   return (
@@ -18,20 +20,50 @@ function GalleryPage() {
         </div>
       </nav>
 
-      {/* Formulário de login */}
-      <div className="login-container">
-        <h2>Log in</h2>
-        <input type="text" placeholder="Placeholder" className="input-field" />
-        <h2>Mot de passe</h2>
-        <input
-          type="password"
-          placeholder="Placeholder"
-          className="input-field"
-        />
-        <button className="login-button">Se connecter</button>
-      </div>
+      {/* Gallerie de photos */}
+      <nav className="mosaics">
+      <ImageList variant="masonry" cols={3} gap={10}>
+  {itemData.map((item) => (
+    <ImageListItem key={item.img}>
+      <img
+        srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
+        src={`${item.img}?w=248&fit=crop&auto=format`}
+        alt={item.title}
+        loading="lazy"
+      />
+    </ImageListItem>
+  ))}
+</ImageList>
+</nav>
     </div>
   );
 }
+
+const itemData = [
+  {
+    img: require('./Assets/img_exemple1.jpg'),
+    title: 'Mosaïque 1',
+  },
+  {
+    img: require("./Assets/img_exemple2.jpg"),
+    title: 'Mosaïque 2',
+  },
+  {
+    img: require("./Assets/Arbre.png"),
+    title: 'Arbre 1',
+  },
+  {
+    img: require("./Assets/Arbre2.png"),
+    title: 'Arbre 2',
+  },
+  {
+    img: require("./Assets/LGBT.png"),
+    title: 'Drapeau LGBT',
+  },
+  {
+    img: require("./Assets/Tortue.png"),
+    title: 'Tortue',
+  },
+];
 
 export default GalleryPage;

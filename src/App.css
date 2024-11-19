@@ -179,3 +179,9 @@ p {
 .login-button:hover {
   background-color: #e6b800;
 }
+
+.mosaics{
+  width: 95%;
+  margin-left : 2.5%;
+  margin-top: 2.5%;
+}
