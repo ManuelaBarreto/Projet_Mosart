@@ -4,7 +4,10 @@ import "./App.css";
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
+const URL = "http://127.0.0.1:8000/items/";
+
 function GalleryPage() {
+  itemData.map((item) => (console.log(item.img_url)))
   return (
     <div>
       {/* Barra de navegação */}
@@ -22,12 +25,12 @@ function GalleryPage() {
 
       {/* Gallerie de photos */}
       <nav className="mosaics">
+      {/* <img src="https://lh3.googleusercontent.com/d/1DU7wgPAW_mBEgMa9OHzJQcxkjV5thwrH=s220?authuser=0"/> */}
       <ImageList variant="masonry" cols={3} gap={10}>
   {itemData.map((item) => (
-    <ImageListItem key={item.img}>
+    <ImageListItem key={item.img_url}>
       <img
-        srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-        src={`${item.img}?w=248&fit=crop&auto=format`}
+        src={item.img_url}
         alt={item.title}
         loading="lazy"
       />
@@ -39,31 +42,14 @@ function GalleryPage() {
   );
 }
 
-const itemData = [
-  {
-    img: require('./Assets/img_exemple1.jpg'),
-    title: 'Mosaïque 1',
+const response_get = await fetch(URL, {
+  method: "GET",
+  headers: {
+    "Content-Type": "application/json",
   },
-  {
-    img: require("./Assets/img_exemple2.jpg"),
-    title: 'Mosaïque 2',
-  },
-  {
-    img: require("./Assets/Arbre.png"),
-    title: 'Arbre 1',
-  },
-  {
-    img: require("./Assets/Arbre2.png"),
-    title: 'Arbre 2',
-  },
-  {
-    img: require("./Assets/LGBT.png"),
-    title: 'Drapeau LGBT',
-  },
-  {
-    img: require("./Assets/Tortue.png"),
-    title: 'Tortue',
-  },
-];
+});
+const itemData = await response_get.json();
+
+console.log(itemData)
 
 export default GalleryPage;
