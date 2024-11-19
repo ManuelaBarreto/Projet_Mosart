@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.kaushan-script-regular {
+  font-family: "Kaushan Script", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.inter-regular {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100;
+  font-style: normal;
+}
+
+body {
+  min-height: 100vh;
+  font-family: inter-regular;
+  background: linear-gradient(to bottom, #fff, #659eb2);
+  color: #333;
+}
+
+.App {
+  text-align: center;
+}
+
+.HomePage {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 20px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  margin-left: 8%;
+}
+
+.nav-right {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.logo {
+  height: 40px;
+  margin-right: 10px;
+}
+
+h1 {
+  font-family: kaushan-script-regular;
+}
+
+.nav-right a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #333;
+}
+
+.nav-right a.active {
+  font-weight: bold;
+  color: #007bff;
+}
+
+.nav-right a:hover {
+  color: #007bff;
+}
+
+.App-header {
+  padding: 20px;
+}
+
+.App-header {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 4%;
+  /* background-color: brown; */
+}
+
+.Logo-accueil {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin: 0 auto;
+  gap: 3%;
+}
+
+.Logo-accueil h2 {
+  font-family: kaushan-script-regular;
+  font-size: 80px;
+}
+
+.logo-accueil-img {
+  height: 120px;
+}
+
+p {
+  font-size: 18px;
+  width: 75%;
+  margin: 0 auto;
+  text-align: justify; /* Alinha o texto justificado */
+}
+
+.gallery {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 8%;
+  margin: 0 auto;
+}
+
+.gallery-image {
+  width: 200px;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.gallery-button {
+  background-color: #ffcc00;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  width: 15%;
+  margin: 0 auto;
+  transition: background-color 0.3s;
+}
+
+.gallery-button:hover {
+  background-color: #e6b800;
+}
+
+/* Estilos da página de login */
+.login-container {
+  margin: 50px auto;
+  width: 300px;
+  text-align: left;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  background-color: #ffecb3;
+}
+
+.login-button {
+  width: 100%;
+  background-color: #ffcc00;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s;
+}
+
+.login-button:hover {
+  background-color: #e6b800;
+}
+
+.mosaics{
+  width: 95%;
+  margin-left : 2.5%;
+  margin-top: 2.5%;
+}
