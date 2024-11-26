@@ -1,4 +1,5 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from typing import Optional
 from pydantic import BaseModel
 import json
@@ -13,10 +14,24 @@ class Item(BaseModel):
 
 app = FastAPI()
 
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins = ["*"],
+    allow_credentials = True,
+    allow_methods = ["*"],
+    allow_headers = ["*"]
+)
+
 
 @app.get("/")
 def read_root():
     return {"Hello": "World"}
+
+
+@app.get("/items/")
+async def get_items():
+    items = read_items_from_db()
+    return items
 
 
 @app.get("/items/{item_id}")
@@ -34,6 +49,7 @@ async def store_item(item: Item):
     items.append(item.model_dump())
     store_item_to_db(items)
     return {"result": item}
+
 
 def read_items_from_db():
     try:
