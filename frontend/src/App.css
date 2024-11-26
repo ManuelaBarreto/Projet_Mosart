@@ -181,7 +181,12 @@ p {
 }
 
 .mosaics{
-  width: 95%;
-  margin-left : 2.5%;
+  width: 90%;
+  margin-left : 5%;
   margin-top: 2.5%;
+}
+
+.mosaicsimg{
+  max-width: 100%;
+  height: auto;
 }

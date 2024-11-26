@@ -18,17 +18,6 @@ function DetailPage() {
         </div>
       </nav>
 
-      {/* Gallerie de photos */}
-      <div>
-          <p>
-            Bienvenue sur Mos’Art, un site étudiant engagé où vous pouvez créer
-            et découvrir des mosaïques photographiques. Chaque œuvre combine une
-            image finale impactante et des centaines de photos qui la composent,
-            illustrant des concepts profonds à travers cette double lecture.
-            Participez à l’aventure en contribuant à des créations uniques et
-            collectives.
-          </p>
-        </div>
     </div>
   );
 }

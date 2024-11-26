@@ -25,15 +25,17 @@ function GalleryPage() {
 
       {/* Gallerie de photos */}
       <nav className="mosaics">
-      {/* <img src="https://lh3.googleusercontent.com/d/1DU7wgPAW_mBEgMa9OHzJQcxkjV5thwrH=s220?authuser=0"/> */}
       <ImageList variant="masonry" cols={3} gap={10}>
   {itemData.map((item) => (
     <ImageListItem key={item.img_url}>
+      <Link to="/details" style={{ textDecoration: 'none', color: 'inherit' }}>
       <img
+        className="mosaicsimg"
         src={item.img_url}
         alt={item.title}
         loading="lazy"
       />
+      </Link>
     </ImageListItem>
   ))}
 </ImageList>
