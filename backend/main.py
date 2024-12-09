@@ -10,6 +10,7 @@ class Item(BaseModel):
     #id: Optional[int] = None
     img_url: str
     title: Optional[str] = None
+    label: Optional[list] = None
     description: Optional[str] = None
 
 app = FastAPI()
