@@ -1,0 +1,93 @@
+# Projet : Guide pour Exécuter le Projet
+
+Ce README explique comment configurer et exécuter le projet, qui est divisé en deux grandes étapes : **Backend** et **Frontend**. Suivez les instructions ci-dessous.
+
+---
+
+## Étape 1 : Exécuter le Backend
+
+Le backend est responsable de la création et de la gestion de la base de données. Il utilise le framework **FastAPI** pour fournir une API fonctionnelle et documentée. Le code backend se trouve dans le dossier `backend`.
+
+### Étapes pour exécuter le backend :
+
+1. **Accéder au dossier backend**  
+   Ouvrez un terminal et naviguez vers le répertoire `backend` avec la commande :  
+   ```bash
+   cd backend
+   ```
+
+2. **Créer un environnement virtuel (venv)**  
+   Créez un environnement virtuel Python pour gérer les dépendances :  
+   ```bash
+   python -m venv venv
+   ```
+   Activez l’environnement virtuel :  
+   - Sur Windows :  
+     ```bash
+     venv\Scripts\activate
+     ```
+   - Sur macOS/Linux :  
+     ```bash
+     source venv/bin/activate
+     ```
+
+3. **Installer FastAPI [standard]**  
+   Installez FastAPI et les dépendances nécessaires avec `pip` :  
+   ```bash
+   pip install "fastapi[standard]"
+   ```
+
+4. **Lancer le serveur FastAPI**  
+   Démarrez le serveur en exécutant le fichier `main.py` :  
+   ```bash
+   fastapi dev main.py
+   ```
+
+   Le serveur démarrera et affichera dans le terminal des informations telles que l’adresse locale où il est accessible (par exemple, `http://127.0.0.1:8000`).
+
+### Comment utiliser les pages générées par FastAPI :
+
+- Accédez à la documentation interactive de l’API en visitant :  
+  [`http://127.0.0.1:8000/docs`](http://127.0.0.1:8000/docs)  
+  Vous pouvez explorer les endpoints disponibles et tester les fonctionnalités directement depuis l’interface.
+
+- Une autre version de la documentation, au format **Redoc**, est disponible à :  
+  [`http://127.0.0.1:8000/redoc`](http://127.0.0.1:8000/redoc)
+
+---
+
+## Étape 2 : Exécuter le Frontend
+
+Le frontend est développé en **JavaScript** à l’aide du framework **React**. Le code se trouve dans le dossier `frontend`.
+
+### Étapes pour exécuter le frontend :
+
+1. **Accéder au dossier frontend**  
+   Naviguez vers le répertoire `frontend` dans le terminal :  
+   ```bash
+   cd frontend
+   ```
+
+2. **Installer les dépendances**  
+   Assurez-vous que **Node.js** est installé sur votre système, puis installez les dépendances du projet :  
+   ```bash
+   npm install
+   ```
+
+3. **Lancer le serveur de développement React**  
+   Démarrez le serveur de développement avec la commande :  
+   ```bash
+   npm start
+   ```
+
+   Cette commande ouvrira automatiquement une fenêtre dans votre navigateur avec l’application en cours d’exécution. Si cela ne se produit pas, vous pouvez accéder manuellement à l’adresse locale par défaut :  
+   [`http://localhost:3000`](http://localhost:3000)
+
+---
+
+### Remarques finales :
+
+- Assurez-vous que le backend est en cours d’exécution avant de démarrer le frontend, afin que l’application fonctionne correctement.  
+- En cas de doute, consultez la documentation de chaque outil ou contactez l’équipe de développement.  
+
+Amusez-vous bien avec le projet ! 🚀
