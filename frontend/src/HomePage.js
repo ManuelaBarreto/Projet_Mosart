@@ -5,7 +5,7 @@ import './HomePage.css';
 export default function HomePage() {
   return (
     <div className="home-page">
-      <Nav_Bar variant="small" />
+      <Nav_Bar />
       <div className="content">
         <h1 className="title">Mos'Art</h1>
         <p className="description">
