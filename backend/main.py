@@ -46,7 +46,7 @@ async def get_item(item_id: int):
 async def store_item(item: Item):
     items = read_items_from_db()
     next_id = max([entry["id"] for entry in items], default=0) + 1
-    item["id"] = next_id
+    item.id = next_id
     items.append(item.model_dump())
     store_item_to_db(items)
     return {"result": item}
