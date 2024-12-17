@@ -5,9 +5,9 @@ import './HomePage.css';
 export default function HomePage() {
   return (
     <div className="home-page">
-      <Nav_Bar />
+      <Nav_Bar variant="show-logo"/>
       <div className="content">
-        <h1 className="title">Mos'Art</h1>
+        <h1 className="title kaushan-script-regular">Mos'Art</h1>
         <p className="description">
           Explorez le monde des mosaïques photographiques. Participez à
           l'aventure en contribuant à des créations uniques et collectives.

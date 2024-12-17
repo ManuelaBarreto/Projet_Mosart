@@ -1,11 +1,7 @@
 .kaushan-script-regular {
-  font-family: "Kaushan Script", cursive;
+  font-family: "Kaushan Script", serif;
   font-weight: 400;
   font-style: normal;
-}
-
-* {
-  font-family: kaushan-script-regular;
 }
 
 .home-page {
@@ -25,7 +21,6 @@
   
   .title {
     font-size: 48px;
-    font-family: 'Cursive', sans-serif;
     margin-bottom: 20px;
   }
   
