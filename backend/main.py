@@ -7,7 +7,7 @@ import json
 DATABASE_FILE = "data.json"
 
 class Item(BaseModel):
-    #id: Optional[int] = None
+    id: Optional[int] = None
     img_url: str
     title: Optional[str] = None
     label: Optional[list] = None
@@ -45,8 +45,8 @@ async def get_item(item_id: int):
 @app.post("/items/")
 async def store_item(item: Item):
     items = read_items_from_db()
-    #next_id = max([entry["id"] for entry in items], default=0) + 1
-    #item["id"] = next_id
+    next_id = max([entry["id"] for entry in items], default=0) + 1
+    item["id"] = next_id
     items.append(item.model_dump())
     store_item_to_db(items)
     return {"result": item}
