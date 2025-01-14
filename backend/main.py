@@ -1,5 +1,6 @@
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.staticfiles import StaticFiles
 from typing import Optional
 from pydantic import BaseModel
 import json
@@ -23,6 +24,7 @@ app.add_middleware(
     allow_headers = ["*"]
 )
 
+app.mount("/images", StaticFiles(directory="images"), name='images')
 
 @app.get("/")
 def read_root():
