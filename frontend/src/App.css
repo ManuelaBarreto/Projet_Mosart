@@ -130,23 +130,6 @@ p {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.gallery-button {
-  background-color: #ffcc00;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  font-size: 16px;
-  cursor: pointer;
-  border-radius: 5px;
-  width: 15%;
-  margin: 0 auto;
-  transition: background-color 0.3s;
-}
-
-.gallery-button:hover {
-  background-color: #e6b800;
-}
-
 /* Estilos da página de login */
 .login-container {
   margin: 50px auto;
