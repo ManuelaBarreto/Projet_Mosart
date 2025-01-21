@@ -1,6 +1,33 @@
-import React from "react";
 import { Link } from "react-router-dom";
 import "./App.css";
+import React, { useEffect } from 'react';
+import OpenSeadragon from 'openseadragon';
+
+const ZoomableImage = () => {
+  useEffect(() => {
+    OpenSeadragon({
+      id: "openseadragon",
+      prefixUrl: "https://cdnjs.cloudflare.com/ajax/libs/openseadragon/4.0.0/images/",
+      tileSources: {
+        width: 256*2**7, // Full width of the image
+        height: 256*2**7, // Full height of the image
+        tileSize: 256, // Size of each tile (e.g., 256x256)
+        tileOverlap: 0, // No overlap between tiles
+        minLevel: 0, // Minimum zoom level
+        maxLevel: 7, // Maximum zoom level
+        getTileUrl: function (level, x, y) {
+          // Construct the URL dynamically based on the level, x, and y
+          return `http://localhost:8000/images/mandelbrot-2/${level}/${x}_${y}.jpeg`;
+        },
+      },
+      // Optional: Zoom and pan settings
+      defaultZoomLevel: 0,
+      debugMode: false,
+    });
+  }, []);
+
+  return <div id="openseadragon" style= {{width:'100%', height: '100vh'}}/>;
+};
 
 function DetailPage() {
   return (
@@ -41,13 +68,10 @@ function DetailPage() {
         </div>
 
       {/* Image */}
-        <div>
-        <img
-            src={require("./Assets/img_exemple1.jpg")}
-            alt="Mosaïque 1"
-            className="Image-detail"
-          />
-        </div>
+      <div>
+        <ZoomableImage/>
+      </div>
+        
       
       {/* Description */}
         <div className="Description-detail">
@@ -60,5 +84,6 @@ function DetailPage() {
     </div>
   );
 }
+
 
 export default DetailPage;

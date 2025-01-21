@@ -22,7 +22,7 @@ function GalleryPage() {
       <Link to="/details" style={{ textDecoration: 'none', color: 'inherit' }}>
       <img
         className="mosaicsimg"
-        src={item.img_url}
+        src={"http://localhost:8000/images/"+item.img_url}
         alt={item.title}
         loading="lazy"
       />

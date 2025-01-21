@@ -1,55 +1,61 @@
 [
   {
-    "img_url": "https://lh3.googleusercontent.com/d/1DU7wgPAW_mBEgMa9OHzJQcxkjV5thwrH",
+    "id": 1,
+    "img_url": "Arbre.png",
     "title": "Tree",
     "label": [
       "Nature",
       "Fire"
     ],
-    "description": "L'image repr\u00c3\u00a9sente un arbre en automne, symbolisant la transition et le changement, rendue dans un style pixel art. Ce choix de repr\u00c3\u00a9sentation donne \u00c3\u00a0 l\u00e2\u20ac\u2122arbre une apparence d\u00c3\u00a9lib\u00c3\u00a9r\u00c3\u00a9ment simplifi\u00c3\u00a9e et g\u00c3\u00a9om\u00c3\u00a9trique, chaque pixel devenant une brique visuelle contribuant \u00c3\u00a0 l\u00e2\u20ac\u2122ensemble. Les teintes chaudes de l\u00e2\u20ac\u2122automne \u00e2\u20ac\u201c rouge, orange, jaune et brun \u00e2\u20ac\u201c sont mises en avant pour \u00c3\u00a9voquer la chaleur m\u00c3\u00a9lancolique de cette saison."
+    "description": "L'image représente un arbre en automne, symbolisant la transition et le changement, rendue dans un style pixel art. Ce choix de représentation donne à l'arbre une apparence délibérément simplifiée et géométrique, chaque pixel devenant une brique visuelle contribuant à l'ensemble. Les teintes chaudes de l'automne \"rouge, orange, jaune et brun\" sont mises en avant pour évoquer la chaleur mélancolique de cette saison."
   },
   {
-    "img_url": "https://lh3.googleusercontent.com/d/17nuP0usCsT2KdGbSu6_hR7kOvqwO-vjt",
+    "id": 2,
+    "img_url": "Arbre2.png",
     "title": "Tree 2",
     "label": [
       "Nature"
     ],
-    "description": "L'image illustre un arbre solitaire au c\u00c5\u201cur d'un champ, r\u00c3\u00a9alis\u00c3\u00a9 dans un style pixel art. Ce style invite le spectateur \u00c3\u00a0 se concentrer sur l\u00e2\u20ac\u2122essence m\u00c3\u00aame de la sc\u00c3\u00a8ne : la solitude de l\u00e2\u20ac\u2122arbre et l\u00e2\u20ac\u2122immensit\u00c3\u00a9 du champ. L'arbre se dresse fi\u00c3\u00a8rement, ses branches s'\u00c3\u00a9tendant comme une silhouette majestueuse, tandis que le champ environnant est repr\u00c3\u00a9sent\u00c3\u00a9 par des motifs simples de teintes vertes ou dor\u00c3\u00a9es. Le ciel encadre cette sc\u00c3\u00a8ne naturelle, offrant un contraste doux entre terre et air."
+    "description": "L'image illustre un arbre solitaire au coeur d'un champ, réalisé dans un style pixel art. Ce style invite le spectateur à se concentrer sur l'essence même de la scène : la solitude de l'arbre et l'immensité du champ. L'arbre se dresse fièrement, ses branches s'étendant comme une silhouette majestueuse, tandis que le champ environnant est représenté par des motifs simples de teintes vertes ou dorées. Le ciel encadre cette scène naturelle, offrant un contraste doux entre terre et air."
   },
   {
-    "img_url": "https://lh3.googleusercontent.com/d/15wrsDG9iD-X0mZUbKzS3-jLnUbqtOiGE",
+    "id": 3,
+    "img_url": "eye.jpg",
     "title": "Eye",
     "label": [
       "Life",
       "Family"
     ],
-    "description": "L\u00e2\u20ac\u2122image d\u00c3\u00a9peint un \u00c5\u201cil humain stylis\u00c3\u00a9 en pixel art, mais avec une approche innovante : chaque pixel, au lieu d\u00e2\u20ac\u2122\u00c3\u00aatre une simple couleur, est une image miniature repr\u00c3\u00a9sentant un \u00c3\u00a9l\u00c3\u00a9ment de la nature \u00e2\u20ac\u201c des animaux, des plantes, ou des paysages. L\u00e2\u20ac\u2122iris, avec ses multiples teintes et nuances, devient une mosa\u00c3\u00afque riche, symbolisant la diversit\u00c3\u00a9 et l\u00e2\u20ac\u2122interconnexion du monde naturel. Le contraste entre les d\u00c3\u00a9tails naturels de chaque pixel et la forme globale simplifi\u00c3\u00a9e de l\u00e2\u20ac\u2122\u00c5\u201cil cr\u00c3\u00a9e une tension harmonieuse entre le micro et le macro."
+    "description": "L'image dépeint un oeil humain stylisé en pixel art, mais avec une approche innovante : chaque pixel, au lieu d'être une simple couleur, est une image miniature représentant un élément de la nature : des animaux, des plantes, ou des paysages. L'iris, avec ses multiples teintes et nuances, devient une mosaïque riche, symbolisant la diversité et l'interconnexion du monde naturel. Le contraste entre les détails naturels de chaque pixel et la forme globale simplifiée de l'oeil crée une tension harmonieuse entre le micro et le macro."
   },
   {
-    "img_url": "https://lh3.googleusercontent.com/d/1yEN8uDBvFdn-yIjOlunfnOkM9a4Vha9W",
+    "id": 4,
+    "img_url": "LGBT.png",
     "title": "LGBT Flag",
     "label": [
       "Engagement",
       "Love"
     ],
-    "description": "L\u00e2\u20ac\u2122image repr\u00c3\u00a9sente le drapeau LGBT embl\u00c3\u00a9matique, compos\u00c3\u00a9 de six bandes horizontales color\u00c3\u00a9es (rouge, orange, jaune, vert, bleu et violet), dans un style pixelis\u00c3\u00a9. En r\u00c3\u00a9duisant le drapeau \u00c3\u00a0 des blocs de couleur simples, l\u00e2\u20ac\u2122\u00c5\u201cuvre met en lumi\u00c3\u00a8re l\u00e2\u20ac\u2122essence du symbole LGBT : l\u00e2\u20ac\u2122unit\u00c3\u00a9 dans la diversit\u00c3\u00a9. Utiliser ce style pour repr\u00c3\u00a9senter le drapeau LGBT connecte ce symbole \u00c3\u00a0 une g\u00c3\u00a9n\u00c3\u00a9ration globale et moderne. Cette \u00c5\u201cuvre montre que l\u00e2\u20ac\u2122identit\u00c3\u00a9 et la diversit\u00c3\u00a9 peuvent \u00c3\u00aatre exprim\u00c3\u00a9es m\u00c3\u00aame dans leur forme la plus simplifi\u00c3\u00a9e. Elle rappelle que la force du drapeau LGBT r\u00c3\u00a9side autant dans la symbolique de ses couleurs que dans ce qu\u00e2\u20ac\u2122il repr\u00c3\u00a9sente : un appel \u00c3\u00a0 l\u00e2\u20ac\u2122\u00c3\u00a9galit\u00c3\u00a9, \u00c3\u00a0 l\u00e2\u20ac\u2122amour et \u00c3\u00a0 la c\u00c3\u00a9l\u00c3\u00a9bration des diff\u00c3\u00a9rences."
+    "description": "L'image représente le drapeau LGBT emblématique, composé de six bandes horizontales colorées (rouge, orange, jaune, vert, bleu et violet), dans un style pixelisé. En réduisant le drapeau à des blocs de couleur simples, l'oeuvre met en lumière l'essence du symbole LGBT : l'unité dans la diversité. Utiliser ce style pour représenter le drapeau LGBT connecte ce symbole à une génération globale et moderne. Cette oeuvre montre que l'identité et la diversité peuvent être exprimées même dans leur forme la plus simplifiée. Elle rappelle que la force du drapeau LGBT réside autant dans la symbolique de ses couleurs que dans ce qu'il représente : un appel à l'égalité, à l'amour et à la célébration des différences."
   },
   {
-    "img_url": "https://lh3.googleusercontent.com/d/1uz2g_tOabbXcgpPehU2V7kg186QmRCDz",
+    "id": 5,
+    "img_url": "Turtle.png",
     "title": "Turtle",
     "label": [
       "Ocean",
       "Pollution"
     ],
-    "description": "a tortue, symbole de s\u00c3\u00a9r\u00c3\u00a9nit\u00c3\u00a9 et de long\u00c3\u00a9vit\u00c3\u00a9, devient ici un ambassadeur des oc\u00c3\u00a9ans. En \u00c3\u00a9tant compos\u00c3\u00a9e d\u00e2\u20ac\u2122\u00c3\u00a9l\u00c3\u00a9ments estivaux, elle rappelle la connexion intrins\u00c3\u00a8que entre la vie marine et les activit\u00c3\u00a9s humaines c\u00c3\u00b4ti\u00c3\u00a8res. En unissant l\u00e2\u20ac\u2122oc\u00c3\u00a9an (tortue) et la plage (\u00c3\u00a9l\u00c3\u00a9ments estivaux), l\u00e2\u20ac\u2122\u00c5\u201cuvre pourrait sugg\u00c3\u00a9rer la n\u00c3\u00a9cessit\u00c3\u00a9 de pr\u00c3\u00a9server ces espaces interconnect\u00c3\u00a9s, o\u00c3\u00b9 nos actions sur terre ont des r\u00c3\u00a9percussions sur la vie sous-marine. L\u00e2\u20ac\u2122esth\u00c3\u00a9tique joyeuse et color\u00c3\u00a9e des pixels rend hommage \u00c3\u00a0 l\u00e2\u20ac\u2122\u00c3\u00a9t\u00c3\u00a9, une saison souvent associ\u00c3\u00a9e \u00c3\u00a0 la libert\u00c3\u00a9, \u00c3\u00a0 la d\u00c3\u00a9tente et \u00c3\u00a0 un lien renforc\u00c3\u00a9 avec la nature. L\u00e2\u20ac\u2122approche mosa\u00c3\u00afque invite le spectateur \u00c3\u00a0 alterner entre une vue d\u00e2\u20ac\u2122ensemble \u00e2\u20ac\u201c la tortue dans l\u00e2\u20ac\u2122oc\u00c3\u00a9an \u00e2\u20ac\u201c et une exploration des d\u00c3\u00a9tails \u00e2\u20ac\u201c les images qui la composent, repr\u00c3\u00a9sentant des souvenirs de plage et de vacances."
+    "description": "a tortue, symbole de sérénité et de longévité, devient ici un ambassadeur des océans. En étant composée d'éléments estivaux, elle rappelle la connexion intrinsèque entre la vie marine et les activités humaines côtières. En unissant l'océan (tortue) et la plage (éléments estivaux), l'oeuvre pourrait suggérer la nécessité de préserver ces espaces interconnectés, où nos actions sur terre ont des répercussions sur la vie sous-marine. L'esthétique joyeuse et colorée des pixels rend hommage à l'été, une saison souvent associée à la liberté, à la détente et à un lien renforcé avec la nature. L'approche mosaïque invite le spectateur à alterner entre une vue d'ensemble : la tortue dans l'océan, et une exploration des détails : les images qui la composent, représentant des souvenirs de plage et de vacances."
   },
   {
-    "img_url": "https://lh3.googleusercontent.com/d/1z7RWTcoN2i3tU1U4ujxu6zhgucyUsBTO",
+    "id": 6,
+    "img_url": "VanGogh.jpg",
     "title": "Van Gogh",
     "label": [
       "Peinture",
       "Art"
     ],
-    "description": "Cette \u00c5\u201cuvre revisite un classique en y injectant une dimension contemporaine et profond\u00c3\u00a9ment symbolique. En rempla\u00c3\u00a7ant chaque pixel par un visage, l\u00e2\u20ac\u2122artiste relie la magnificence du cosmos au caract\u00c3\u00a8re universel de l\u00e2\u20ac\u2122humanit\u00c3\u00a9. Les \u00c3\u00a9toiles et les cieux, qui dans l\u00e2\u20ac\u2122original repr\u00c3\u00a9sentent l\u00e2\u20ac\u2122immensit\u00c3\u00a9 et l\u00e2\u20ac\u2122infini, deviennent ici une mosa\u00c3\u00afque des innombrables individus qui composent notre monde. Les visages, par leur vari\u00c3\u00a9t\u00c3\u00a9, incarnent la richesse de l\u00e2\u20ac\u2122humanit\u00c3\u00a9 dans toutes ses formes, ses cultures et ses exp\u00c3\u00a9riences. Cela invite \u00c3\u00a0 voir la beaut\u00c3\u00a9 de l\u00e2\u20ac\u2122harmonie collective, comme un \u00c3\u00a9cho des tourbillons harmonieux de l\u00e2\u20ac\u2122univers. Cette \u00c5\u201cuvre pourrait \u00c3\u00a9galement sugg\u00c3\u00a9rer que l\u00e2\u20ac\u2122infini, repr\u00c3\u00a9sent\u00c3\u00a9 par le ciel \u00c3\u00a9toil\u00c3\u00a9, est le reflet des histoires et des vies humaines. Chaque visage, unique et singulier, contribue \u00c3\u00a0 une vision plus grande, tout comme chaque \u00c3\u00a9toile dans l\u00e2\u20ac\u2122univers."
+    "description": "Cette oeuvre revisite un classique en y injectant une dimension contemporaine et profondément symbolique. En remplaçant chaque pixel par un visage, l'artiste relie la magnificence du cosmos au caractère universel de l'humanité. Les étoiles et les cieux, qui dans l'original représentent l'immensité et l'infini, deviennent ici une mosaïque des innombrables individus qui composent notre monde. Les visages, par leur variété, incarnent la richesse de l'humanité dans toutes ses formes, ses cultures et ses expériences. Cela invite à voir la beauté de l'harmonie collective, comme un écho des tourbillons harmonieux de l'univers. Cette oeuvre pourrait également suggérer que l'infini, représenté par le ciel étoilé, est le reflet des histoires et des vies humaines. Chaque visage, unique et singulier, contribue à une vision plus grande, tout comme chaque étoile dans l'univers."
   }
 ]
