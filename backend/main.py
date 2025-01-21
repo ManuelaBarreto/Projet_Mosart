@@ -4,6 +4,8 @@ from fastapi.staticfiles import StaticFiles
 from typing import Optional
 from pydantic import BaseModel
 import json
+import os
+from fastapi.responses import FileResponse
 
 DATABASE_FILE = "data.json"
 
@@ -24,7 +26,17 @@ app.add_middleware(
     allow_headers = ["*"]
 )
 
-app.mount("/images", StaticFiles(directory="images"), name='images')
+
+
+@app.get("/images/{file_path:path}")
+async def serve_image(file_path: str):
+    file_location = os.path.join("images", file_path)  # Adjust to your images directory
+    if not os.path.exists(file_location):
+        raise HTTPException(status_code=404, detail="Image not found")
+    
+    # Add CORS headers
+    headers = {"Access-Control-Allow-Origin": "*"}
+    return FileResponse(file_location, headers=headers)
 
 @app.get("/")
 def read_root():

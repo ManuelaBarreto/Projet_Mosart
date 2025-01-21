@@ -4,44 +4,71 @@
   font-style: normal;
 }
 
+.inter-regular {
+  font-family: "Inter", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
 .home-page {
-    text-align: center;
-    background-color: #7e57c2; /* Roxo mais claro */
-    color: white;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .content {
-    margin-top: -80px; /* Ajuste para compensar o nav-bar */
-  }
-  
-  .title {
-    font-size: 48px;
-    margin-bottom: 20px;
-  }
-  
-  .description {
-    font-size: 18px;
-    margin-bottom: 30px;
-    max-width: 600px;
-    line-height: 1.6;
-  }
-  
-  .gallery-button {
-    font-size: 16px;
-    padding: 10px 20px;
-    background-color: white;
-    color: #4a148c;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-  
-  .gallery-button:hover {
-    background-color: #d1c4e9; /* Hover mais claro */
-  }
-  
+  text-align: center;
+  color: white;
+  min-height: 100vh; /* Garante que ocupa toda a altura da tela */
+  display: flex;
+  flex-direction: column; /* Alinha os elementos verticalmente */
+}
+
+.content {
+  margin-top: 35px;
+  flex: 1; /* Faz o conteúdo ocupar o espaço disponível */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* Centraliza verticalmente o conteúdo */
+  padding: 20px; /* Adiciona espaçamento interno */
+}
+
+.title {
+  font-size: clamp(40px, calc(7vw + 4vh), 200px);
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: clamp(12px, calc(1.2vw + 1vh), 24px);
+  margin-bottom: 30px;
+  max-width: 80%;
+  line-height: 1.6;
+}
+
+.gallery-button {
+  font-size: clamp(10px, calc(1vw + 0.8vh), 20px);
+  background-color: #4F378B;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  display: flex; /* Torna o botão um contêiner flexível */
+  flex-direction: column;
+  align-items: center; /* Alinha os filhos verticalmente no centro */
+  justify-content: center; /* Opcional: centraliza horizontalmente */
+  gap: 10px; /* Espaçamento entre o texto e a imagem */
+  cursor: pointer;
+}
+
+.gallery-button:hover {
+  background-color: #d1c4e9; /* Hover mais claro */
+}
+
+.DownArrow {
+  width: 25%; /* Ajuste conforme necessário para o tamanho da seta */
+}
+
+/* Ajusta o botão no rodapé e centraliza */
+.footer {
+  margin-top: auto; /* Empurra o botão para o final do contêiner */
+  display: flex; /* Torna flexível para centralizar */
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  padding: 20px 0; /* Espaçamento ao redor */
+}
