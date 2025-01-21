@@ -1,30 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import "./App.css";
+import Nav_Bar from "./Nav_Bar.js";
 
 function LoginPage() {
   return (
     <div>
       {/* Barra de navegação */}
-      <nav className="navbar">
-        <div className="nav-left">
-          <img src={require("./Assets/logo.png")} alt="Logo" className="logo" />
-          <h1>Mos'Art</h1>
-        </div>
-        <div className="nav-right">
-          <Link to="/">Page d'accueil</Link>
-          <Link to="/galerie">Galerie</Link>
-          <Link to="/login" className="active">
-            Connexion
-          </Link>
-        </div>
-      </nav>
+      <Nav_Bar variant="show-logo"/>
 
       {/* Formulário de login */}
       <div className="login-container">
-        <h2>Log in</h2>
+        <h2 style={{ color: 'white' }}>Log in</h2>
         <input type="text" placeholder="Placeholder" className="input-field" />
-        <h2>Mot de passe</h2>
+        <h2 style={{ color: 'white' }}>Mot de passe</h2>
         <input
           type="password"
           placeholder="Placeholder"
