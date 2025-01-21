@@ -1,9 +1,9 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import HomePage from './HomePage';
 import LoginPage from './LoginPage';
 import GalleryPage from './GalleryPage';
-import DetailPage from './DetailPage';
+import ImageDetailsPage from './ImageDetailsPage';
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/galerie" element={<GalleryPage />} />
-          <Route path="/details" element={<DetailPage />} />
+          <Route path="/details/:id" element={<ImageDetailsPage />} />
         </Routes>
       </div>
     </Router>

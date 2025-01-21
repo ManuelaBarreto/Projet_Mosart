@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./App.css";
 import ImageList from '@mui/material/ImageList';
@@ -7,7 +7,28 @@ import ImageListItem from '@mui/material/ImageListItem';
 const URL = "http://127.0.0.1:8000/items/";
 
 function GalleryPage() {
-  itemData.map((item) => (console.log(item.img_url)))
+  
+  const [itemData, setItemData] = useState([]);
+
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        const response = await fetch(URL, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        const data = await response.json();
+        setItemData(data);
+      } catch (error) {
+        console.error("Erreur lors du chargement des données :", error);
+      }
+    };
+
+    fetchImages();
+  }, []);
+
   return (
     <div>
       {/* Barra de navegação */}
@@ -27,11 +48,11 @@ function GalleryPage() {
       <nav className="mosaics">
       <ImageList variant="masonry" cols={3} gap={10}>
   {itemData.map((item) => (
-    <ImageListItem key={item.img_url}>
-      <Link to="/details" style={{ textDecoration: 'none', color: 'inherit' }}>
+    <ImageListItem key={item.id}>
+      <Link to={`/details/${item.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
       <img
         className="mosaicsimg"
-        src={"http://localhost:8000/images/"+item.img_url}
+        src={`http://localhost:8000/images/${item.img_url}`}
         alt={item.title}
         loading="lazy"
       />
@@ -43,15 +64,5 @@ function GalleryPage() {
     </div>
   );
 }
-
-const response_get = await fetch(URL, {
-  method: "GET",
-  headers: {
-    "Content-Type": "application/json",
-  },
-});
-const itemData = await response_get.json();
-
-console.log(itemData)
 
 export default GalleryPage;

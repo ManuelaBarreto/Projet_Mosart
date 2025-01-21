@@ -1,8 +1,34 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
+import { useParams, Link } from "react-router-dom";
 import "./App.css";
 
-function DetailPage() {
+const URL = "http://127.0.0.1:8000/items/";
+
+function ImageDetailsPage() {
+
+  const { id } = useParams(); // Récupérer l'id depuis l'URL
+  const [image, setImage] = useState(undefined);
+
+  useEffect(() => {
+      fetch(`${URL}${id}`, {
+          headers: {
+            "Content-Type": "application/json",
+          }})
+        .then(response => response.json())
+        .then(data => setImage(data.item))
+        .catch(error => {
+          console.error("Erreur lors du chargement des détails :", error);
+        });
+  }, [id]);
+
+  useEffect(() => {
+    console.log(image)
+  }, [image])
+
+  if (!image) {
+    return <p>Chargement des détails...</p>;
+  }
+
   return (
     <div>
       {/* Barra de navegação */}
@@ -19,11 +45,11 @@ function DetailPage() {
       </nav>
 
       {/* Return Button */}
-      <button className="return-button">Return</button>
+      <Link to="/galerie">Retour à la galerie</Link>
 
       {/* Title */}
         <div className="Title-detail">
-          <h2>Eyes on the ocean</h2>
+          <h2>{image.title}</h2>
         </div>
 
       {/* Thèmes */}
@@ -35,7 +61,7 @@ function DetailPage() {
           </div>
         <div className="Theme-mosaic">
           <p>
-            Océan
+            {image.label}
           </p>
         </div>
         </div>
@@ -43,8 +69,8 @@ function DetailPage() {
       {/* Image */}
         <div>
         <img
-            src={require("./Assets/img_exemple1.jpg")}
-            alt="Mosaïque 1"
+            src={`http://localhost:8000/images/${image.img_url}`}
+            alt={image.title}
             className="Image-detail"
           />
         </div>
@@ -52,8 +78,7 @@ function DetailPage() {
       {/* Description */}
         <div className="Description-detail">
           <p>
-            Les océans, recouvrant 70% de la planète, jouent un rôle primordial dans l’existence humaine et de la biodiversité. Ils nous font respirer, manger, ils régulent le climat et abritent 80 % de la vie dans le monde.
-          Le réchauffement de la température des eaux, l’acidification du milieu, la désoxygénation, et l’élévation du niveau de la mer, combinés aux impacts de la surpêche, de la pollution.
+          {image.description}
           </p>
         </div>
 
@@ -61,4 +86,4 @@ function DetailPage() {
   );
 }
 
-export default DetailPage;
+export default ImageDetailsPage;
