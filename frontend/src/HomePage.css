@@ -31,7 +31,8 @@
 
 .title {
   font-size: clamp(40px, calc(7vw + 4vh), 200px);
-  margin-bottom: 20px;
+  margin-top: 80px;
+  transition: all 0.3s ease, font-size 0.3s ease, opacity 0.3s ease;
 }
 
 .description {
@@ -39,6 +40,7 @@
   margin-bottom: 30px;
   max-width: 80%;
   line-height: 1.6;
+  transition: opacity 0.3s ease;
 }
 
 .gallery-button {

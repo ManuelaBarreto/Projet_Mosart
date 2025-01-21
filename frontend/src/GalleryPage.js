@@ -13,7 +13,7 @@ function GalleryPage() {
   return (
     <div>
       {/* Barra de navegação */}
-      <Nav_Bar variant="show-logo" />
+      <Nav_Bar variant="" />
       {/* Gallerie de photos */}
       <nav className="mosaics">
       <ImageList variant="masonry" cols={3} gap={10}>

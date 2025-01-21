@@ -17,7 +17,7 @@
   padding: 0 20px;
   color: white;
   z-index: 1000; /* Mantém a barra acima de outros elementos */;
-  font-family: kaushan-script-regular;
+  transition: background-color 0.3s ease;
 }
 
 .nav-bar.show-logo {
