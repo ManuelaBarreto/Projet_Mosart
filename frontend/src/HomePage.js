@@ -15,7 +15,7 @@ export default function HomePage() {
       </div>
       <div className="footer">
         <button className="gallery-button inter-regular">
-          <p>Galery</p>
+          <div>Galery</div>
           <img className="DownArrow" src={require('./Assets/DownArrow.png')} alt="Down Arrow" />
         </button>
       </div>

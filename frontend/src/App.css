@@ -20,7 +20,7 @@
 body {
   min-height: 100vh;
   font-family: inter-regular;
-  background: linear-gradient(to bottom, #fff, #659eb2);
+  background: #4F378B;
   color: #333;
 }
 
@@ -112,7 +112,7 @@ p {
   font-size: 18px;
   width: 75%;
   margin: 0 auto;
-  text-align: justify; /* Alinha o texto justificado */
+  text-align: center; /* Alinha o texto justificado */
 }
 
 .gallery {

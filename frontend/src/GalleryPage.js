@@ -1,6 +1,8 @@
 import React from "react";
+import Nav_Bar from './Nav_Bar';
 import { Link } from "react-router-dom";
 import "./App.css";
+/*import './GaleryPage.css';*/
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 
@@ -11,18 +13,7 @@ function GalleryPage() {
   return (
     <div>
       {/* Barra de navegação */}
-      <nav className="navbar">
-        <div className="nav-left">
-          <img src={require("./Assets/logo.png")} alt="Logo" className="logo" />
-          <h1>Mos'Art</h1>
-        </div>
-        <div className="nav-right">
-          <Link to="/">Page d'accueil</Link>
-          <Link to="/galerie" className="active">Galerie</Link>
-          <Link to="/login">Connexion</Link>
-        </div>
-      </nav>
-
+      <Nav_Bar variant="show-logo" />
       {/* Gallerie de photos */}
       <nav className="mosaics">
       <ImageList variant="masonry" cols={3} gap={10}>
