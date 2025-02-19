@@ -5,6 +5,7 @@ import "./App.css";
 /*import './GaleryPage.css';*/
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import Card from "./Components/Card";
 
 const URL = "http://127.0.0.1:8000/items/";
 
@@ -20,12 +21,7 @@ function GalleryPage() {
   {itemData.map((item) => (
     <ImageListItem key={item.img_url}>
       <Link to="/details" style={{ textDecoration: 'none', color: 'inherit' }}>
-      <img
-        className="mosaicsimg"
-        src={"http://localhost:8000/images/"+item.img_url}
-        alt={item.title}
-        loading="lazy"
-      />
+      <Card item={item}/>
       </Link>
     </ImageListItem>
   ))}
