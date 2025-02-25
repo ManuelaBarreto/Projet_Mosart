@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "./App.css";
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
+import Card from "./Components/Card";
 
 const URL = "http://127.0.0.1:8000/items/";
 
@@ -32,30 +33,14 @@ function GalleryPage() {
   return (
     <div>
       {/* Barra de navegação */}
-      <nav className="navbar">
-        <div className="nav-left">
-          <img src={require("./Assets/logo.png")} alt="Logo" className="logo" />
-          <h1>Mos'Art</h1>
-        </div>
-        <div className="nav-right">
-          <Link to="/">Page d'accueil</Link>
-          <Link to="/galerie" className="active">Galerie</Link>
-          <Link to="/login">Connexion</Link>
-        </div>
-      </nav>
-
+      <Nav_Bar variant="" />
       {/* Gallerie de photos */}
       <nav className="mosaics">
       <ImageList variant="masonry" cols={3} gap={10}>
   {itemData.map((item) => (
-    <ImageListItem key={item.id}>
-      <Link to={`/details/${item.id}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-      <img
-        className="mosaicsimg"
-        src={`http://localhost:8000/images/${item.img_url}`}
-        alt={item.title}
-        loading="lazy"
-      />
+    <ImageListItem key={item.img_url}>
+      <Link to="/details" style={{ textDecoration: 'none', color: 'inherit' }}>
+      <Card item={item}/>
       </Link>
     </ImageListItem>
   ))}
