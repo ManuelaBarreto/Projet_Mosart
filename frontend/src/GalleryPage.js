@@ -1,8 +1,6 @@
-import React from "react";
-import Nav_Bar from './Nav_Bar';
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./App.css";
-/*import './GaleryPage.css';*/
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Card from "./Components/Card";
@@ -10,7 +8,28 @@ import Card from "./Components/Card";
 const URL = "http://127.0.0.1:8000/items/";
 
 function GalleryPage() {
-  itemData.map((item) => (console.log(item.img_url)))
+  
+  const [itemData, setItemData] = useState([]);
+
+  useEffect(() => {
+    const fetchImages = async () => {
+      try {
+        const response = await fetch(URL, {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        });
+        const data = await response.json();
+        setItemData(data);
+      } catch (error) {
+        console.error("Erreur lors du chargement des données :", error);
+      }
+    };
+
+    fetchImages();
+  }, []);
+
   return (
     <div>
       {/* Barra de navegação */}
@@ -30,15 +49,5 @@ function GalleryPage() {
     </div>
   );
 }
-
-const response_get = await fetch(URL, {
-  method: "GET",
-  headers: {
-    "Content-Type": "application/json",
-  },
-});
-const itemData = await response_get.json();
-
-console.log(itemData)
 
 export default GalleryPage;
