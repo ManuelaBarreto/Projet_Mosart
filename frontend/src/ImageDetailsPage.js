@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
 import "./App.css";
 import OpenSeadragon from 'openseadragon';
+import Nav_Bar from "./Nav_Bar";
 
 const URL = "http://127.0.0.1:8000/items/";
 
@@ -59,17 +60,7 @@ function ImageDetailsPage() {
   return (
     <div>
       {/* Barra de navegação */}
-      <nav className="navbar">
-        <div className="nav-left">
-          <img src={require("./Assets/logo.png")} alt="Logo" className="logo" />
-          <h1>Mos'Art</h1>
-        </div>
-        <div className="nav-right">
-          <Link to="/">Page d'accueil</Link>
-          <Link to="/galerie">Galerie</Link>
-          <Link to="/login">Connexion</Link>
-        </div>
-      </nav>
+            <Nav_Bar variant="" />
 
       {/* Return Button */}
       <Link to="/galerie">Galerie</Link>
