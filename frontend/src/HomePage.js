@@ -1,11 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Nav_Bar from './Nav_Bar';
 import './HomePage.css';
 import GalleryPage from './GalleryPage';
 
 export default function HomePage() {
-
   const [scrollY, setScrollY] = useState(0);
+  const galleryRef = useRef(null); // Criando referência para GalleryPage
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,6 +17,12 @@ export default function HomePage() {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  const scrollToGallery = () => {
+    if (galleryRef.current) {
+      galleryRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <div className='full-page'>
@@ -40,15 +46,21 @@ export default function HomePage() {
           </p>
         </div>
         <div className="footer">
-          <button className="gallery-button inter-regular"
-          style={{ opacity: `${Math.max(0, 1 - scrollY / 550)}` }} // Reduz visibilidade
+          <button
+            className="gallery-button inter-regular"
+            style={{ opacity: `${Math.max(0, 1 - scrollY / 550)}` }} // Reduz visibilidade
+            onClick={scrollToGallery} // Adiciona o evento de clique
           >
             <div>Galery</div>
             <img className="DownArrow" src={require('./Assets/DownArrow.png')} alt="Down Arrow" />
           </button>
         </div>
       </div>
-      <GalleryPage></GalleryPage>
+      
+      {/* Adicionando ref ao GalleryPage */}
+      <div ref={galleryRef}>
+        <GalleryPage />
+      </div>
     </div>
   );
 }
