@@ -5,6 +5,7 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
 import Card from "./Components/Card";
 import Nav_Bar from "./Nav_Bar";
+import './GalleryPage.css';
 
 const URL = "http://127.0.0.1:8000/items/";
 
@@ -36,17 +37,13 @@ function GalleryPage() {
       {/* Barra de navegação */}
       <Nav_Bar variant="show-logo" />
       {/* Gallerie de photos */}
-      <nav className="mosaics">
-      <ImageList variant="masonry" cols={3} gap={10}>
-  {itemData.map((item) => (
-    <ImageListItem key={item.id}>
-      <Link to={`/details/${item.id-1}`} style={{ textDecoration: 'none', color: 'inherit' }}>
-      <Card item={item}/>
-      </Link>
-    </ImageListItem>
-  ))}
-</ImageList>
-</nav>
+      <div className="img-container">
+        {itemData.map((item) => (
+          <Link to={`/details/${item.id-1}`} style={{ textDecoration: 'none', color: 'inherit' }} key={item.img_url}>
+          <Card item={item}/>
+          </Link>
+        ))}
+      </div>
     </div>
   );
 }
