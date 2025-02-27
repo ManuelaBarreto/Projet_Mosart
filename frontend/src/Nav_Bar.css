@@ -22,12 +22,12 @@
 
 .nav-bar.show-logo {
   justify-content: space-between; /* Espaço entre o texto e os ícones */
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 5%;
+  padding-right: 5%;
 }
 
 .nav-text {
-  font-size: 18px;
+  font-size: 30px;
   font-weight: bold;
   color: white;
   font-family: kaushan-script-regular;
@@ -37,9 +37,10 @@
 .nav-icons {
   display: flex;
   gap: 15px; /* Espaçamento entre os ícones */
+  height: 30%;
 }
 
 .icon {
-  font-size: 20px;
   cursor: pointer;
+  align-items: center;
 }
