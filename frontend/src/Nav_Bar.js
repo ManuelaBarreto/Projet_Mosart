@@ -7,15 +7,6 @@ export default function Nav_Bar({ variant, scrollToHome }) {
       {variant === 'show-logo' &&
         <div className="nav-text kaushan-script-regular">Mos'Art</div>
       }
-        <div className="nav-icons">
-          <img className="icon"
-                src='/home.png'
-                alt="Home Icon"
-                loading="lazy"
-                onClick={scrollToHome}
-          >
-          </img>
-        </div>
     </header>
   );
 }

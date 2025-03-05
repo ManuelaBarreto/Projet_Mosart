@@ -2,10 +2,12 @@ import React, { useState, useEffect, useRef } from 'react';
 import Nav_Bar from './Nav_Bar';
 import './HomePage.css';
 import GalleryPage from './GalleryPage';
+import ScrollToTop from "react-scroll-to-top";
 
 export default function HomePage() {
   const [scrollY, setScrollY] = useState(0);
-  const galleryRef = useRef(null); // Criando referência para GalleryPage
+  const galleryRef = useRef(null);
+  const homeRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,10 +26,17 @@ export default function HomePage() {
     }
   };
 
+  const scrollToHome = () => {
+    if (homeRef.current) {
+      homeRef.current.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   return (
     <div className='full-page'>
-      <div className="home-page">
-        <Nav_Bar variant="" />
+      <ScrollToTop smooth color="#000" />
+      <div className="home-page" ref={homeRef}>
+        <Nav_Bar variant="" scrollToHome={scrollToHome} />
         <div className="content">
           <h1
             className="title kaushan-script-regular"
