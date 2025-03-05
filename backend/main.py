@@ -68,7 +68,7 @@ async def store_item(item: Item):
 
 def read_items_from_db():
     try:
-        with open(DATABASE_FILE,'r') as file:
+        with open(DATABASE_FILE,'r', encoding="utf-8") as file:
             items = json.load(file)
     except FileNotFoundError:
         items = []
