@@ -60,41 +60,57 @@ function ImageDetailsPage() {
   return (
     <div>
       {/* Barra de navegação */}
-            <Nav_Bar variant="" />
-
-      {/* Return Button */}
-      <Link to="/galerie">Galerie</Link>
-
-      {/* Title */}
-        <div className="Title-detail">
-          <h2>{image.title}</h2>
-        </div>
-
-      {/* Thèmes */}
-        <div className="Theme">
-          <div className="Theme-main">
-            <p>
-            Thèmes :
-          </p>
-          </div>
-        <div className="Theme-mosaic">
-          <p>
-            {image.label}
-          </p>
-        </div>
-        </div>
-
-      {/* Image */}
-        <div>
-        <ZoomableImage image={image.img_url}/>
-        </div>
+            <Nav_Bar variant="show-logo" />
       
-      {/* Description */}
-        <div className="Description-detail">
-          <p>
-          {image.description}
-          </p>
+      <div className ='gallery_content'>
+        <div className ='first-line'>
+          {/* Return Button */}
+          <Link to="/">
+          <img className="icon-arrow"
+                  src='/Return-arrow.png'
+                  alt="Return arrow Icon"
+                  loading="lazy"
+            ></img></Link>
+
+          {/* Title */}
+            <div className="Title-detail">
+              <h2>{image.title}</h2>
+            </div>
+          </div>
+
+        <div className='centrer-card'>
+          <div className='Card'>
+            {/* Thèmes */}
+              <div className="Theme">
+                <div className="Theme-main">
+                  <p>
+                  Thèmes :
+                </p>
+                </div>
+              <div className="Themes-mosaic">
+                {image.label.map((label, index) => (
+                  <span key={index} className="Theme-mosaic">
+                    {label}
+                  </span>
+                ))}
+              </div>
+              </div>
+
+            {/* Image */}
+              <div className="Image-OpenSeaDragon">
+                {/*<ZoomableImage image={image.img_url}/>*/}
+                <img className="mosaic-image" src={"http://localhost:8000/images/" + image.img_url}/>
+              </div>
+          </div>
         </div>
+        
+        {/* Description */}
+          <div className="Description-detail">
+            <p>
+            {image.description}
+            </p>
+          </div>
+      </div>
 
     </div>
   );
