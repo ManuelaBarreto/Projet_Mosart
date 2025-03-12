@@ -10,7 +10,8 @@ DATABASE_FILE = "data.json"
 app = FastAPI()
 
 origins = [
-    "http://localhost:3000",  # Frontend development server
+    "http://localhost:3000", # Frontend development server
+    "http://canelle.aioli.ec-m.fr:"
 ]
 
 app.add_middleware(
