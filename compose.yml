@@ -26,8 +26,6 @@ services:
       - "traefik.http.routers.frontend.entrypoints=websecure"
       - "traefik.http.routers.frontend.tls=true"
       - "traefik.http.services.frontend.loadbalancer.server.port=80"
-    environment:
-      - REACT_APP_API_URL=https://api.mosaics.vbilla.fr
     restart: always
 
   backend:
