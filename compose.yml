@@ -52,6 +52,7 @@ services:
       dockerfile: Dockerfile
     volumes:
       - ./backend/mosaics:/app/mosaics
+      - ./backend/tiles:/app/tiles
     networks:
       - web
     labels:
