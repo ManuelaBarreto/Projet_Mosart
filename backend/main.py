@@ -12,6 +12,7 @@ app = FastAPI()
 origins = [
     "http://localhost:3000", # Frontend development server
     "https://mosaics.vbilla.fr", # Frontend production server
+    "https://api.mosaics.vbilla.fr",  # Backend API domain
 ]
 
 app.add_middleware(
