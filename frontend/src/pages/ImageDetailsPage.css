@@ -8,13 +8,23 @@ body {
 
 p {
   font-size: 18px;
-  width: 75%;
-  margin: 0 auto;
+  width: 100%;
   text-align: center;
 }
 
 .gallery_content{
-  margin-top: 60px;
+  padding-top: 60px;
+  padding-bottom: 40px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  width: 90%;
+  margin: 0 auto;
+  max-height: 100vh;
+  box-sizing: border-box;
 }
 
 .Title-detail{
@@ -22,9 +32,18 @@ p {
   font-weight: 400;
   font-style: normal;
   font-size: 30px;
-  padding-bottom: 20px;
   color: white;
   text-align: center;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: clamp(200px, 100%, 700px);
+  max-height: 100%;
+  box-sizing: border-box;
 }
 
 .Description-detail{
@@ -32,19 +51,11 @@ p {
   font-optical-sizing: auto;
   font-weight: 200;
   font-style: normal;
-  margin-top: 20px;
-  margin-bottom: 30px;
   color: white;
   text-align: left;
 }
 
-.centrer-card{
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.Card{
+.card{
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 
@@ -53,16 +64,16 @@ p {
   gap: 5px;
 
   padding: 10px;
-  margin-bottom: 20px;
   border-radius: 10px;
 
-  width: 1000px;
-  max-width: 90%;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .mosaic-image{
   width: 100%;
   height: auto;
+  object-fit: cover;
 }
 
 .theme-list {

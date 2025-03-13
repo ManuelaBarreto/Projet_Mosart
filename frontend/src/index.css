@@ -13,9 +13,13 @@ body {
   font-style: normal;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  padding: 0;
+  margin: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--title-font), serif;
   font-weight: bold;
+  margin: 0;
 }

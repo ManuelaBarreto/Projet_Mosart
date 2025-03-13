@@ -47,14 +47,12 @@ function ImageDetailsPage() {
 
   return (
     <div className ='gallery_content'>
-      <div className ='first-line'>
-        <div className="Title-detail">
+      <div className='Title-detail'>
           <h2>{mosaic.title}</h2>
-        </div>
       </div>
 
-      <div className='centrer-card'>
-        <div className='Card'>
+      <div className="details-container">
+        <div className='card'>
           <div className="theme-list">
             <span className="theme-title">Thèmes:</span>
             {mosaic.labels.map((label, index) => (
@@ -68,10 +66,10 @@ function ImageDetailsPage() {
             <ZoomableImage slug={mosaic.slug}/>
           </div>
         </div>
-      </div>
 
-      <div className="Description-detail">
-        <p>{mosaic.description}</p>
+        <div className="Description-detail">
+          <p>{mosaic.description}</p>
+        </div>
       </div>
   </div>
   );

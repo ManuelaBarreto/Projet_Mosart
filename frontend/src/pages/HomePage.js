@@ -33,14 +33,15 @@ export default function HomePage() {
           <h1
             className="title"
             style={{
-              fontSize: `${Math.max(40, 150 - scrollY / 5)}px`, // Reduz tamanho
+              fontSize: `clamp(40px, calc(20vw - ${scrollY / 10}vw), 80vw)`, // Reduz tamanho
+              opacity: `clamp(0, 1 - ${scrollY / 300}, 1)`
             }}
           >
             Mos'Art
           </h1>
           <p
             className="description inter-regular"
-            style={{ opacity: `${Math.max(0, 1 - scrollY / 300)}` }}
+            style={{ opacity: `clamp(0, 1 - ${scrollY / 300}, 1)` }}
           >
             Explorez le monde des mosaïques photographiques. Participez à
             l'aventure en contribuant à des créations uniques et collectives.
@@ -49,7 +50,7 @@ export default function HomePage() {
         <div className="footer">
           <button
             className="gallery-button inter-regular"
-            style={{ opacity: `${Math.max(0, 1 - scrollY / 550)}` }}
+            style={{ opacity: `clamp(0, 1 - ${scrollY / 300}, 1)` }}
             onClick={scrollToGallery}
           >
             <div>Galery</div>
