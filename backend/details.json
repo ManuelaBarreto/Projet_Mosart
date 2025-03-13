@@ -1,0 +1,81 @@
+[
+  {
+    "slug": "burger",
+    "title": "Burger",
+    "labels": [
+      "Faim",
+      "Surconsommation"
+    ],
+    "description": " Le burger, qui peut symboliser le consumérisme excessif et la société de la surabondance, est utilisé pour remettre en question nos priorités en matière de consommation. L'œuvre critique la façon dont certaines populations ont accès à des ressources alimentaires en excès, tandis que d'autres luttent pour se nourrir."
+  },
+  {
+    "slug": "homeless",
+    "title": "Corporate",
+    "labels": [
+      "SDF",
+      "Corporate"
+    ],
+    "description": " Le burger, qui peut symboliser le consumérisme excessif et la société de la surabondance, est utilisé pour remettre en question nos priorités en matière de consommation. L'œuvre critique la façon dont certaines populations ont accès à des ressources alimentaires en excès, tandis que d'autres luttent pour se nourrir."
+  },
+  {
+    "slug": "drugs-1",
+    "title": "Drugs (1)",
+    "labels": [
+      "Addiction"
+    ],
+    "description": "Cette œuvre vise à sensibiliser à la réalité de l'addiction et de ses effets. Elle montre comment, tout comme la spirale, l'addiction peut paraître séduisante au début, mais finit par engloutir l'individu dans un tourbillon de dépendance, de souffrance et de perte de contrôle. Elle invite à la réflexion sur les choix que l'on fait et à la prise de conscience des conséquences qui en découlent. Le thème de l'abus de drogues est ici utilisé comme un moyen de traiter la notion de liberté apparente, qui peut en réalité être une illusion, et la façon dont les comportements autodestructeurs peuvent affecter l'individu et son entourage."
+  },
+  {
+    "slug": "drugs-2.png",
+    "title": "Drugs (2)",
+    "labels": [
+      "Addiction"
+    ],
+    "description": "La spirale, qui attire et hypnotise, est une métaphore de l'addiction. Comme un tourbillon, l'utilisateur est entraîné, à la fois par le plaisir initial et par la promesse de l'évasion, mais sans fin, captif de la spirale. Les couleurs et les formes qui semblent se déformer à mesure qu'elles s'approfondissent illustrent l'illusion de maîtrise que l'on ressent lors des premières consommations, suivie de la perte progressive du contrôle à mesure que l'addiction s'installe."
+  },
+  {
+    "slug": "turtle",
+    "title": "Turtle",
+    "labels": [
+      "Ocean",
+      "Pollution"
+    ],
+    "description": "La tortue, symbole de sérénité et de longévité, devient ici un ambassadeur des océans. En étant composée d'éléments estivaux, elle rappelle la connexion intrinsèque entre la vie marine et les activités humaines côtières. En unissant l'océan (tortue) et la plage (éléments estivaux), l'oeuvre pourrait suggérer la nécessité de préserver ces espaces interconnectés, où nos actions sur terre ont des répercussions sur la vie sous-marine. L'esthétique joyeuse et colorée des pixels rend hommage à l'été, une saison souvent associée à la liberté, à la détente et à un lien renforcé avec la nature. L'approche mosaïque invite le spectateur à alterner entre une vue d'ensemble : la tortue dans l'océan, et une exploration des détails : les images qui la composent, représentant des souvenirs de plage et de vacances."
+  },
+  {
+    "slug": "love-1",
+    "title": "Love (1)",
+    "labels": [
+      "Amour",
+      "Bisous"
+    ],
+    "description": "À travers la mosaïque, cette œuvre démontre que l'amour, tout comme un baiser, est un mélange de petites attentions, de souvenirs et de gestes quotidiens qui se transforment en un tout puissant et significatif. Elle invite à reconnaître l'amour dans ses nombreuses formes et à célébrer la beauté de l'intimité humaine dans ses divers aspects. Cette œuvre met en avant l'idée que l'amour est à la fois simple et complexe, multiple et unique."
+  },
+  {
+    "slug": "love-2",
+    "title": "Love (2)",
+    "labels": [
+      "Amour",
+      "Bisous"
+    ],
+    "description": "Cette œuvre vise à réinterpréter le baiser comme un acte universel et profond, mais avec une approche qui l'enrichit de significations supplémentaires grâce à la mosaïque. Chaque image miniature dans la mosaïque représente une facette différente de l'amour – que ce soit des gestes tendres, des moments de complicité, des souvenirs ou des symboles culturels associés à l'intimité. Ensemble, ces images montrent la multiplicité des expériences amoureuses et des émotions liées à un baiser."
+  },
+  {
+    "slug": "nature-1",
+    "title": "Nature (1)",
+    "labels": [
+      "Nature",
+      "Préservation"
+    ],
+    "description": "L'image incarne l'idée que la nature, dans toute sa diversité, est un bien précieux qu'il faut préserver. En composant cette œuvre à partir de petits détails sur les fleurs et les plantes, l'artiste rappelle que chaque élément naturel, aussi minuscule soit-il, est essentiel au maintien de l'équilibre écologique. Cette œuvre invite à la réflexion sur notre responsabilité collective dans la préservation de la biodiversité et de l'environnement naturel."
+  },
+  {
+    "slug": "nature-2",
+    "title": "Nature (2)",
+    "labels": [
+      "Nature",
+      "Fleurs"
+    ],
+    "description": "En s'approchant de l'image, le spectateur découvre la complexité de la nature à travers ces petites scènes florales et végétales, ce qui crée un effet de profondeur et d'enchevêtrement. Le contraste entre la grandeur de la nature représentée et la petite taille des images de fleurs invite à une contemplation méditative sur la beauté et la délicatesse du monde naturel. L'œuvre suscite des émotions de calme, d'émerveillement et de connexion avec la nature."
+  }
+]

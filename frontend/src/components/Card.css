@@ -1,0 +1,66 @@
+@import '../index.css';
+
+.polaroid-card {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    border-radius: 5px;
+
+    max-width: 100%;
+}
+
+.preview-container {
+    position: relative;
+    width: 100%;
+}
+
+.preview-container > img {
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.mosaic-original {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 100;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.mosaic-original:hover {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.polaroid-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 10px;
+}
+
+.polaroid-title {
+    font-family: var(--title-font), serif;
+    font-size: 1.7em;
+    flex: 1;
+    text-align: left;
+}
+
+.polaroid-labels {
+    font-weight: bolder;
+    font-size: 0.7em;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.polaroid-label {
+    background-color: var(--background);
+    color: white;
+    padding: 4px 7px;
+    margin: 2px 0;
+    border-radius: 3px;
+}

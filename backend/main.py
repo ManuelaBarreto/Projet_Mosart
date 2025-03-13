@@ -1,80 +1,89 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Query
 from fastapi.middleware.cors import CORSMiddleware
-from fastapi.staticfiles import StaticFiles
-from typing import Optional
-from pydantic import BaseModel
 import json
 import os
 from fastapi.responses import FileResponse
+from functools import lru_cache
 
 DATABASE_FILE = "data.json"
 
-class Item(BaseModel):
-    id: Optional[int] = None
-    img_url: str
-    title: Optional[str] = None
-    label: Optional[list] = None
-    description: Optional[str] = None
-
 app = FastAPI()
+
+origins = [
+    "http://localhost:3000", # Frontend development server
+    "https://mosaics.vbilla.fr", # Frontend production server
+    "https://api.mosaics.vbilla.fr",  # Backend API domain
+]
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins = ["*"],
-    allow_credentials = True,
-    allow_methods = ["*"],
-    allow_headers = ["*"]
+    allow_origins=origins,
+    allow_credentials=False,
+    allow_methods=["*"],
+    allow_headers=["*"]
 )
 
 
-
-@app.get("/images/{file_path:path}")
-async def serve_image(file_path: str):
-    file_location = os.path.join("images", file_path)  # Adjust to your images directory
-    if not os.path.exists(file_location):
-        raise HTTPException(status_code=404, detail="Image not found")
-    
-    # Add CORS headers
-    headers = {"Access-Control-Allow-Origin": "*"}
-    return FileResponse(file_location, headers=headers)
-
-@app.get("/")
+@app.get("/health")
 def read_root():
-    return {"Hello": "World"}
+    return {"status": "UP"}
+
+@app.get("/mosaics")
+async def get_mosaics(clear_cache: bool = Query(default=False, alias='clear-cache')):
+    if clear_cache:
+        gather_all_details.cache_clear()
+
+    return gather_all_details()
 
 
-@app.get("/items/")
-async def get_items():
-    items = read_items_from_db()
-    return items
+@lru_cache()
+def gather_all_details():
+    mosaics = []
+    for slug in os.listdir("mosaics"):
+        path = os.path.join("mosaics", slug, "details.json")
+
+        if not os.path.exists(path):
+            continue
+
+        with open(path) as f:
+            mosaics.append(json.load(f))
+    return mosaics
 
 
-@app.get("/items/{item_id}")
-async def get_item(item_id: int):
-    items = read_items_from_db()
-    if item_id < 0 or item_id >= len(items):
-        raise HTTPException(status_code=404, detail="Item not found")
-    return {"item": items[item_id]}
+@app.get("/mosaics/{slug}")
+async def get_mosaic(slug: str):
+    path = os.path.join("mosaics", slug, "details.json")
 
-@app.post("/items/")
-async def store_item(item: Item):
-    items = read_items_from_db()
-    next_id = max([entry["id"] for entry in items], default=0) + 1
-    item.id = next_id
-    items.append(item.model_dump())
-    store_item_to_db(items)
-    return {"result": item}
+    if not os.path.exists(path):
+        raise HTTPException(status_code=404, detail="Mosaic not found")
 
+    with open(path) as f:
+        return json.load(f)
 
-def read_items_from_db():
-    try:
-        with open(DATABASE_FILE,'r', encoding="utf-8") as file:
-            items = json.load(file)
-    except FileNotFoundError:
-        items = []
+@app.get("/mosaics/{slug}/original")
+async def serve_image(slug: str):
+    path = os.path.join("mosaics", slug, "original.webp")
 
-    return items
+    if not os.path.exists(path):
+        raise HTTPException(status_code=404, detail="Original not found")
 
-def store_item_to_db(data):
-    with open(DATABASE_FILE, 'w') as file:
-        json.dump(data, file, indent=2)
+    return FileResponse(path)
+
+@app.get("/mosaics/{slug}/thumbnail")
+async def serve_image(slug: str):
+    path = os.path.join("mosaics", slug, "thumbnail.webp")
+
+    if not os.path.exists(path):
+        raise HTTPException(status_code=404, detail="Thumbnail not found")
+
+    return FileResponse(path)
+
+@app.get("/mosaics/{slug}/tiles/{zoom}/{x}_{y}")
+async def serve_image(slug: str, zoom: int, x: int, y: int):
+    filename = f"zoom-{zoom}_{x}-{y}.webp"
+    path = os.path.join("mosaics", slug, filename)
+
+    if not os.path.exists(path):
+        raise HTTPException(status_code=404, detail="Tile not found")
+
+    return FileResponse(path)
