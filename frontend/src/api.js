@@ -1,4 +1,4 @@
-const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.mosaic.vbilla.fr' : 'http://localhost:3000';
+const API_URL = process.env.NODE_ENV === 'production' ? 'https://api.mosaics.vbilla.fr' : 'http://localhost:3000';
 
 export async function fetchMosaics() {
     return fetch(`${API_URL}/mosaics`).then(res => res.json());
