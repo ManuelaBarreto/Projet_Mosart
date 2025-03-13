@@ -33,7 +33,7 @@ export default function HomePage() {
           <h1
             className="title"
             style={{
-              fontSize: `clamp(40px, calc(20vw - ${scrollY / 10}vw), 80vw)`, // Reduz tamanho
+              fontSize: `clamp(40px, calc(17vw - ${scrollY / 10}vw), 80vw)`, // Reduz tamanho
               opacity: `clamp(0, 1 - ${scrollY / 300}, 1)`
             }}
           >
@@ -53,7 +53,7 @@ export default function HomePage() {
             style={{ opacity: `clamp(0, 1 - ${scrollY / 300}, 1)` }}
             onClick={scrollToGallery}
           >
-            <div>Galery</div>
+            <div>Galerie</div>
             <img className="down-arrow" src={require('../assets/down-arrow.png') ?? ""} alt="Down Arrow" />
           </button>
         </div>
