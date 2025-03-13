@@ -11,13 +11,13 @@ app = FastAPI()
 
 origins = [
     "http://localhost:3000", # Frontend development server
-    "http://canelle.aioli.ec-m.fr:"
+    "https://mosaics.vbilla.fr", # Frontend production server
 ]
 
 app.add_middleware(
     CORSMiddleware,
     allow_origins=origins,
-    allow_credentials=True,
+    allow_credentials=False,
     allow_methods=["*"],
     allow_headers=["*"]
 )

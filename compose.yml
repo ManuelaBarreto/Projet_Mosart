@@ -1,0 +1,48 @@
+services:
+  traefik:
+    image: traefik:v2.10
+    command:
+      - "--api.insecure=true"
+      - "--providers.docker=true"
+      - "--entrypoints.websecure.address=:443"
+    ports:
+      - "80:80"       # Redirects HTTP traffic
+      - "443:443"     # For HTTPS traffic
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock:ro"
+      - "./letsencrypt:/letsencrypt" # Store TLS certificates
+    labels:
+      - "traefik.http.routers.traefik.rule=Host(`vbilla.fr`)"
+      - "traefik.http.routers.traefik.middlewares=redirect-to-https"
+      - "traefik.http.middlewares.redirect-to-https.redirectscheme.scheme=https"
+
+  frontend:
+    build:
+      context: ./frontend  # Path to the React app's Dockerfile
+      dockerfile: Dockerfile
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.frontend.rule=Host(`mosaics.vbilla.fr`)"
+      - "traefik.http.routers.frontend.entrypoints=websecure"
+      - "traefik.http.routers.frontend.tls=true"
+      - "traefik.http.services.frontend.loadbalancer.server.port=80"
+    environment:
+      - REACT_APP_API_URL=https://api.mosaics.vbilla.fr
+    restart: always
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    volumes:
+      - ./backend/mosaics:/app/mosaics
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.backend.rule=Host(`api.mosaics.vbilla.fr`)"
+      - "traefik.http.routers.backend.entrypoints=websecure"
+      - "traefik.http.routers.backend.tls=true"
+      - "traefik.http.services.backend.loadbalancer.server.port=80"
+    restart: always
+
+volumes:
+  letsencrypt:
